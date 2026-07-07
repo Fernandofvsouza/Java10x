@@ -1,4 +1,4 @@
-package com.souza.fernando.batismoJava.desafio.d02;
+package com.souza.fernando.batismoJava.desafio.desafioCrudUsers;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,12 +19,16 @@ public class Main {
             input.nextLine();
             switch (opcao) {
                 case 1:
+                    try{
                     System.out.println("Digite o nome do usuario: ");
                     String nome = input.nextLine();
                     System.out.println("Digite o email do usuario: ");
                     String email = input.nextLine();
                     usuarioService.cadastrarUsuario(nome, email);
-                    System.out.println("Usuario cadastrado com sucesso");
+                    System.out.println("Usuario cadastrado com sucesso");}
+                    catch (NomeInvalidoException | EmailInvalidoException e) {
+                        System.out.println("Erro ao cadastrar usuario: " + e.getMessage());
+                    }
                     break;
                 case 2:
                     if(!usuarioService.listarUsuarios()){

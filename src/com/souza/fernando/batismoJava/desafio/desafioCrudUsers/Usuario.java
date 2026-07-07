@@ -1,4 +1,4 @@
-package com.souza.fernando.batismoJava.desafio.d02;
+package com.souza.fernando.batismoJava.desafio.desafioCrudUsers;
 
 public class Usuario {
     private int id;

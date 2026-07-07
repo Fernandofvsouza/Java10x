@@ -1,7 +1,6 @@
-package com.souza.fernando.batismoJava.desafio.d02;
+package com.souza.fernando.batismoJava.desafio.desafioCrudUsers;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class UsuarioService {
     ArrayList<Usuario> usuarios;
@@ -12,7 +11,13 @@ public class UsuarioService {
         this.usuarios = new ArrayList<>();
     }
 
-    public Usuario cadastrarUsuario(String nome, String email) {
+    public Usuario cadastrarUsuario(String nome, String email) throws NomeInvalidoException, EmailInvalidoException{
+       if(nome == null || nome.isBlank()){
+           throw new NomeInvalidoException("Nome não pode ser vazio ");
+       }
+       if(email == null || email.isBlank()|| !email.contains("@")){
+           throw new NomeInvalidoException("Email invalido");
+       }
         Usuario usuario = new Usuario(id, nome, email);
         usuarios.add(usuario);
         id++;
