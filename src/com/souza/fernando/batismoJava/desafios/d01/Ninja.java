@@ -1,4 +1,4 @@
-package com.souza.fernando.batismoJava.desafio.d01;
+package com.souza.fernando.batismoJava.desafios.d01;
 
 public class Ninja {
     private String nome;

@@ -1,4 +1,4 @@
-package com.souza.fernando.batismoJava.desafio.desafioCrudUsers;
+package com.souza.fernando.batismoJava.desafios.desafioCrudUsers;
 
 public class NomeInvalidoException extends RuntimeException {
     public NomeInvalidoException(String message) {
