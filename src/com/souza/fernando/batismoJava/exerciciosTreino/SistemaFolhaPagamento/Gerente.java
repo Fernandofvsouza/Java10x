@@ -10,8 +10,8 @@ public class Gerente extends Funcionario {
 
     @Override
     public double calcularSalario() {
-        salarioBase = salarioBase + bonificacao;
-        return salarioBase;
+
+        return salarioBase +  bonificacao;
     }
 
   @Override

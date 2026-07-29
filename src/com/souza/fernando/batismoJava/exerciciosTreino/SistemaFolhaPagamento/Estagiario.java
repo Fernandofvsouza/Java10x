@@ -10,8 +10,8 @@ public class Estagiario extends Funcionario {
 
     @Override
     public double calcularSalario() {
-        salarioBase = salarioBase + bolsaAuxilio;
-        return salarioBase;
+
+        return salarioBase + bolsaAuxilio;
     }
 
     @Override
