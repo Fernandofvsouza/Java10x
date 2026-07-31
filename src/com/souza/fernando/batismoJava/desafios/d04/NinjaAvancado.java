@@ -1,34 +1,39 @@
 package com.souza.fernando.batismoJava.desafios.d04;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ninjaBasico implements Ninja {
+public class NinjaAvancado implements Ninja {
     private String nome;
     private int idade;
     private String habilidade;
+    private String especialidade;
     private List<TipoHabilidade> habilidades;
 
-    public ninjaBasico(String nome, int idade, String habilidade) {
+    public NinjaAvancado(String nome, int idade, String habilidade, String especialidade) {
         this.nome = nome;
         this.idade = idade;
         this.habilidade = habilidade;
+        this.especialidade = especialidade;
     }
-
     @Override
     public void mostrarInformacoes() {
-       System.out.println("Nome: " + nome);
-       System.out.println("Idade: " + idade);
-       System.out.println("Habilidade: " + habilidade);
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Habilidade: " + habilidade);
+        System.out.println("Especialidade: " + especialidade);
+        this.habilidades = new ArrayList<>();
     }
 
     @Override
     public void executarHabilidade() {
-       System.out.println("Ativar habilidade: " + habilidade);
+        System.out.println("Ativando habilidade: " + habilidade);
     }
 
     public void adicionarTipoHabilidade(TipoHabilidade tipoHabilidade) {
         habilidades.add(tipoHabilidade);
     }
+
 
     public String getNome() {
         return nome;
@@ -52,5 +57,13 @@ public class ninjaBasico implements Ninja {
 
     public void setHabilidade(String habilidade) {
         this.habilidade = habilidade;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
     }
 }
