@@ -2,17 +2,45 @@ package com.souza.fernando.batismoJava.exerciciosTreino.NinjasI;
 
 public class Main {
     static void main(String[] args) {
-        Ninja Naruto = new Uzumaki("Naruto Uzumaki", 18, "Folha", "Hadoukken", "Cansar o adversário");
-        Naruto.apresentar();
-        Naruto.habilidadeEspecial();
-        Naruto.estrategiaDeBatalha();
+        Ninja[] ninjas = {
 
-        System.out.println("----------------------------");
+                new Uzumaki(
 
-        Ninja Sasuke = new Uchiha("Sasuke Uchiha", 20, "Papel", "Hazengan", "Ludibriar o adversário");
-        Sasuke.apresentar();
-        Sasuke.habilidadeEspecial(); 
-        Sasuke.estrategiaDeBatalha();
+                        "Naruto",
+
+                        17,
+
+                        "Aldeia da Folha",
+
+                        "Rasengan",
+
+                        "Ataque surpresa"
+
+                ),
+
+                new Uchiha(
+
+                        "Sasuke",
+
+                        17,
+
+                        "Aldeia da Folha",
+
+                        "Sharingan",
+
+                        "Combate corpo a corpo"
+
+                )
+
+        };
+        for(Ninja ninja : ninjas){
+            ninja.apresentar();
+            ninja.habilidadeEspecial();
+            ninja.estrategiaDeBatalha();
+        }
+
+
+
 
 
     }

@@ -4,6 +4,16 @@ public abstract class Ninja implements EstrategiaDeBatalha {
     private String nome;
     private int idade;
     private String aldeia;
+    private String habilidadeEspecial;
+    private String estrategiaDeBatalha;
+
+    public Ninja(String nome, int idade, String aldeia, String habilidadeEspecial, String estrategiaDeBatalha) {
+        this.nome = nome;
+        this.idade = idade;
+        this.aldeia = aldeia;
+        this.habilidadeEspecial = habilidadeEspecial;
+        this.estrategiaDeBatalha = estrategiaDeBatalha;
+    }
 
     public void apresentar(){
         System.out.println("Olá, meu nome é " + nome + ", tenho " + idade + " anos e sou da aldeia " + aldeia);
@@ -34,5 +44,21 @@ public abstract class Ninja implements EstrategiaDeBatalha {
 
     public void setAldeia(String aldeia) {
         this.aldeia = aldeia;
+    }
+
+    public String getHabilidadeEspecial() {
+        return habilidadeEspecial;
+    }
+
+    public void setHabilidadeEspecial(String habilidadeEspecial) {
+        this.habilidadeEspecial = habilidadeEspecial;
+    }
+
+    public String getEstrategiaDeBatalha() {
+        return estrategiaDeBatalha;
+    }
+
+    public void setEstrategiaDeBatalha(String estrategiaDeBatalha) {
+        this.estrategiaDeBatalha = estrategiaDeBatalha;
     }
 }
